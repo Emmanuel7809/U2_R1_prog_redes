@@ -2,7 +2,6 @@
 #Recuperacion 1 Unidad 2 Introducción a las REST API
 #Programación de Redes 
 #Profesor: Gabriel Barron 
-
 import math
 
 class Point:
@@ -22,7 +21,10 @@ class Point:
     def distance_from_point(self, point):
         return math.hypot(self.__x - point.getx(), self.__y - point.gety())
 
-point1 = Point(0, 0)
-point2 = Point(1, 1)
-print(point1.distance_from_point(point2))
-print(point2.distance_from_xy(2, 0))
+if __name__ == "__main__":
+    point1 = Point(0, 0)
+    point2 = Point(1, 1)
+    
+    print(point1.distance_from_point(point2))
+    print(point2.distance_from_xy(2, 0))
+
