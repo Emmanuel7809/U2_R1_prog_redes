@@ -5,7 +5,6 @@
 class WeekDayError(Exception):
     pass
 
-
 class Weeker:
     DAYS_OF_WEEK = ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom']
 
@@ -27,14 +26,14 @@ class Weeker:
         new_index = (index - n) % len(self.DAYS_OF_WEEK)
         self.__current_day = self.DAYS_OF_WEEK[new_index]
 
-
-try:
-    weekday = Weeker('Lun')
-    print(weekday)
-    weekday.add_days(15)
-    print(weekday)
-    weekday.subtract_days(23)
-    print(weekday)
-    weekday = Weeker('Lun')
-except WeekDayError:
-    print("Lo siento, no puedo atender tu solicitud.")
+if __name__ == "__main__":
+    try:
+        weekday = Weeker('Lun')
+        print(weekday)
+        weekday.add_days(15)
+        print(weekday)
+        weekday.subtract_days(23)
+        print(weekday)
+        weekday = Weeker('Lun')
+    except WeekDayError:
+        print("Lo siento, no puedo atender tu solicitud.")
