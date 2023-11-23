@@ -2,7 +2,6 @@
 #Recuperacion 1 Unidad 2 Introducción a las REST API
 #Programación de Redes 
 #Profesor: Gabriel Barron Rodriguez
-
 class Timer:
     def __init__(self, hours=0, minutes=0, seconds=0):
         self.__hours = hours
@@ -37,10 +36,13 @@ class Timer:
     def __format_time(self, value):
         return f"0{value}" if value < 10 else str(value)
 
+if __name__ == "__main__":
+    timer = Timer(23, 59, 59)
+    print(timer)
+    
+    timer.next_second()
+    print(timer)
+    
+    timer.prev_second()
+    print(timer)
 
-timer = Timer(23, 59, 59)
-print(timer)
-timer.next_second()
-print(timer)
-timer.prev_second()
-print(timer)
