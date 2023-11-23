@@ -2,23 +2,24 @@
 #Recuperacion 1 Unidad 2 Introducción a las REST API
 #Programación de Redes 
 #Profesor: Gabriel Barron Rodriguez
-from calendar import Calendar
+import calendar
 
-class MiCalendario(Calendar):
-    def contar_dia_de_la_semana_en_año(self, year, weekday):
-        if not (0 <= weekday <= 6):
-            raise ValueError("El día de la semana debe ser un número entre 0 y 6.")
-        
+class MyCalendar(calendar.Calendar):
+    def count_weekday_in_year(self, year, weekday):
+        if weekday < 0 or weekday > 6:
+            raise ValueError("El valor de 'weekday' debe estar entre 0 y 6.")
+
+        all_weeks = self.yeardays2calendar(year)
         count = 0
-        for month in range(1, 13):
-            for week in self.monthdayscalendar(year, month):
-                for day in week:
-                    if day == weekday and day != 0:
-                        count += 1
-        
+
+        for month in all_weeks:
+            for week in month:
+                if any(day[weekday] != 0 for day in week):
+                    count += 1
+
         return count
 
-mi_calendario = MiCalendario()
+my_cal = MyCalendar()
+result = my_cal.count_weekday_in_year(2019, 0)
+print(f"En 2019, el lunes (día 0) aparece {result} veces en el año.")
 
-print(mi_calendario.contar_dia_de_la_semana_en_año(2019, 0))  # Número de veces que ocurrió el lunes en 2019
-print(mi_calendario.contar_dia_de_la_semana_en_año(2000, 6))  # Número de veces que ocurrió el domingo en 2000
