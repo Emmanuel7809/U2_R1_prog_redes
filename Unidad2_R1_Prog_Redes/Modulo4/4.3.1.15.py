@@ -18,6 +18,6 @@ def contar_letras(contenido):
     except Exception as e:
         print(f"Se produjo un error: {e}")
 
-contenido_archivo = input("Ingrese el contenido del archivo: ")
-
-contar_letras(contenido_archivo)
+if __name__ == "__main__":
+    contenido_archivo = input("Ingrese el contenido del archivo: ")
+    contar_letras(contenido_archivo)
