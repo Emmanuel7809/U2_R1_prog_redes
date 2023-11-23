@@ -2,7 +2,6 @@
 #Recuperacion 1 Unidad 2 Introducción a las REST API
 #Programación de Redes 
 #Profesor: Gabriel Barron Rodriguez
-
 import math
 
 class Point:
@@ -33,5 +32,7 @@ class Triangle:
 
         return side1 + side2 + side3
 
-triangle = Triangle(Point(0, 0), Point(1, 0), Point(0, 1))
-print(triangle.perimeter())
+if __name__ == "__main__":
+    triangle = Triangle(Point(0, 0), Point(1, 0), Point(0, 1))
+    print(triangle.perimeter())
+
