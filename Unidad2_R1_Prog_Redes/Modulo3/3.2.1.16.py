@@ -2,10 +2,8 @@
 #Recuperacion 1 Unidad 2 Introducción a las REST API
 #Programación de Redes 
 #Profesor: Gabriel Barron Rodriguez
-
 class QueueError(Exception):
     pass
-
 
 class Queue:
     def __init__(self):
@@ -23,18 +21,19 @@ class Queue:
         else:
             raise QueueError("Queue is empty")
 
-
 class SuperQueue(Queue):
-    def isempty(self):
-        return self.is_empty()
+    def is_empty(self):
+        return super().is_empty()
 
+if __name__ == "__main__":
+    que = SuperQueue()
 
-que = SuperQueue()
-que.put(1)
-que.put("perro")
-que.put(False)
-for i in range(4):
-    if not que.is_empty():  # Corregir aquí
-        print(que.get())
-    else:
-        print("Cola vacía")
+    que.put(1)
+    que.put("perro")
+    que.put(False)
+
+    for i in range(4):
+        if not que.is_empty():
+            print(que.get())
+        else:
+            print("Cola vacía")
