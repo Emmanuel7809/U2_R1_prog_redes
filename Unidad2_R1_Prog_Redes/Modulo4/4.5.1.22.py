@@ -2,18 +2,20 @@
 #Recuperacion 1 Unidad 2 Introducción a las REST API
 #Programación de Redes 
 #Profesor: Gabriel Barron Rodriguez
-
 from datetime import datetime
 
 dt = datetime(2020, 11, 4, 14, 53, 00)
-
-print(dt.strftime('%Y/%m/%d %H:%M:%S')) # 2020/11/04 14:53:00
-print(dt.strftime('%y/%B/%d %I:%M:%S %p')) # 20/November/04 02:53:00 PM
-print(dt.strftime('%a, %Y %b %d')) # Wed, 2020 Nov 04
-print(dt.strftime('%A, %Y %B %d')) # Wednesday, 2020 November 04
-
-print("Día de la semana:", dt.strftime('%w')) # 3
-
-print("Día del año:", dt.strftime('%j')) # 309
-
-print("Número de semana en el año:", dt.strftime('%W')) # 44
+formatted_date_time = dt.strftime('%Y/%m/%d %H:%M:%S')
+print(formatted_date_time)
+formatted_date_time_long = dt.strftime('%y/%B/%d %I:%M:%S %p')
+print(formatted_date_time_long)
+formatted_date_short = dt.strftime('%a, %Y %b %d')
+print(formatted_date_short)
+formatted_date_long = dt.strftime('%A, %Y %B %d')
+print(formatted_date_long)
+weekday_number = dt.strftime('%w')
+print("Día de la semana:", weekday_number)
+day_of_year = dt.strftime('%j')
+print("Día del año:", day_of_year)
+week_number = dt.strftime('%W')
+print("Número de semana en el año:", week_number)
