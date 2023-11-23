@@ -2,7 +2,6 @@
 #Recuperacion 1 Unidad 2 Introducción a las REST API
 #Programación de Redes 
 #Profesor: Gabriel Barron Rodriguez
-
 def display_siete_segmentos(numero):
     digitos = [
         ["###", "# #", "# #", "# #", "###"],
