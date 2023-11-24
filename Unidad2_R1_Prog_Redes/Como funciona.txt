@@ -1,0 +1,3 @@
+como ya no lo vi profe le dejo esto aqui de pilon.
+bonita tarde
+La API utiliza Alpha Vantage para obtener datos de series temporales intradiarias (intraday) para un símbolo de stock específico. En este caso, la función utilizada es TIME_SERIES_INTRADAY, que devuelve datos sobre los precios y el volumen de operaciones en intervalos de tiempo de 5 minutos.
