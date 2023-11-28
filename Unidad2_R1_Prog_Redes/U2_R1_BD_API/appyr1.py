@@ -20,7 +20,7 @@ def query_records():
     registros = []
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM Usuarios')
+    cursor.execute('SELECT * FROM Usuarios, Pedidos')
     data = cursor.fetchall()
     for reg in data:
         registros.append(dict(reg))
