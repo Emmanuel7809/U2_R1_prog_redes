@@ -1,3 +1,4 @@
+La API3 Funciona con URL de soundcloud, elegi esas para probar
 https://soundcloud.com/metroboomin/savage-mode
 
 https://soundcloud.com/billy-gillies/billy-gillies-dna-loving-you-feat-hannah-boyelyn-demo
