@@ -1,3 +1,6 @@
+##Alan Francisco Emmanuel Aguilar Fuentes
+## Programacion de Redes
+## Gabriel barron 
 import http.client
 import json
 
