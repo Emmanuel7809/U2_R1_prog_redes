@@ -3,12 +3,12 @@
 ### Api 2 traductor 
 import http.client
 
-# Clave de API para acceder al servicio de traducción
+# Clave de API 
 API_KEY = "0ceb9beaf7msh48113a6f6b7e45ep1b530bjsn77587cdf5efc"
 
 def translate_text(source_language, target_language, text):
     """
-    Traduce un texto desde un idioma de origen a un idioma de destino utilizando un servicio de traducción.
+    Esta API traduce un texto desde un idioma de origen a un idioma de destino utilizando un servicio de traducción.
 
     Args:
         source_language (str): Idioma de origen del texto.
